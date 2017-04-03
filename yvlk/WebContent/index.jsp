@@ -8,5 +8,11 @@
 </head>
 <body>
 <h1>Welcome</h1>
+<form action="Registration">
+	Name:<input type ="text" name="name"><br>
+	email:<input type ="text" name="email"><br>
+	confirmemail:<input type="text" name="confirmemail"><br>
+	<input type="submit" value ="Register">
+</form>
 </body>
 </html>
