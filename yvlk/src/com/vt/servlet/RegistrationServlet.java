@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.connector.Response;
+
 import com.vt.dao.AccessDao;
 import com.vt.dao.AccessDaoImpl;
 import com.vt.model.Registrationmodel;
@@ -30,6 +32,7 @@ public class RegistrationServlet extends HttpServlet{
 		commonutils commonutil=new commonutils();
 		dao.register(commonutil.registrationmodetoentity(registrationmodel, registrationentity));
 		System.out.println("inserted");		
+		resp.sendRedirect("success.jsp");
 		
 		
 		

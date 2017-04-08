@@ -9,7 +9,7 @@ import com.vt.model.Registrationmodel;
 import com.vt.sql.Registrationentity;
 
 public class AccessDaoImpl implements AccessDao {
-	Configuration conf=new Configuration();
+	Configuration conf=new Configuration().configure("Hibernate.cfg.xml");
     
 	SessionFactory sf=conf.buildSessionFactory();
 	Session session=sf.openSession();
@@ -19,6 +19,8 @@ public class AccessDaoImpl implements AccessDao {
 	@Override
 	public void register(Registrationentity registrationmodetoentity) {
 		session.save(registrationmodetoentity );
+		tx.commit();
 	}
+	
 }
 	
