@@ -1,4 +1,4 @@
-package com.vt.servlet;
+package com.vt.controller;
 
 import java.io.IOException;
 
